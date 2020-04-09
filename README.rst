@@ -23,6 +23,30 @@ REST API Client for WPS store
 * Documentation: https://wps-rest-api-client.readthedocs.io.
 
 
+Install
+-------
+Install from source::
+
+   # cd into wps_rest_api_client
+   pip install -e ./
+
+Install from pypi::
+
+   pip install wps_rest_api_client
+
+
+Usage
+-------
+python script::
+
+   from wps_rest_api_client import WPSRestAPI
+   # setup your token
+   TOKEN = ""
+   wps_api = WPSRestAPI(TOKEN)
+
+   response = wps_api.get_products()
+   print(response)
+
 Features
 --------
 
