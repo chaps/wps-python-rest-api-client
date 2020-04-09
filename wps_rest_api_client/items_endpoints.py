@@ -12,7 +12,7 @@ class ItemsEndpoints:
         return requests.get(
             uri,   
             headers=self.get_headers()
-        )
+        ).json()
 
 
     def get_item(self, item_id, *args, **kwargs):
@@ -22,7 +22,7 @@ class ItemsEndpoints:
                 item_id
             ),
             headers=self.get_headers()
-        )
+        ).json()
 
 
     def get_item_attributevalues(self, item_id):
@@ -35,7 +35,7 @@ class ItemsEndpoints:
                 ),
                 headers=self.get_headers()
             )
-        )
+        ).json()
     
     def get_item_country(self, item_id):
         return requests.get(
@@ -47,9 +47,7 @@ class ItemsEndpoints:
                 ),
                 headers=self.get_headers()
             )
-        )
-
-        pass
+        ).json()
 
 
     def get_item_images(self, item_id):
@@ -62,7 +60,7 @@ class ItemsEndpoints:
                 ),
                 headers=self.get_headers()
             )
-        )
+        ).json()
 
 
     def get_item_product(self, item_id):
@@ -75,7 +73,7 @@ class ItemsEndpoints:
                 ),
             headers=self.get_headers()
             )
-        )
+        ).json()
     
     def get_item_quantities(self, item_id):
         return requests.get(
@@ -87,7 +85,7 @@ class ItemsEndpoints:
                 ),
             headers=self.get_headers()
             )
-        )
+        ).json()
 
     def get_item_tags(self, item_id):
         return requests.get(
@@ -99,7 +97,7 @@ class ItemsEndpoints:
                 ),
             headers=self.get_headers()
             )
-        )
+        ).json()
 
     def get_item_taxonomyterms(self, item_id):
         return requests.get(
@@ -111,4 +109,4 @@ class ItemsEndpoints:
                 ),
             headers=self.get_headers()
             )
-        )
+        ).json()

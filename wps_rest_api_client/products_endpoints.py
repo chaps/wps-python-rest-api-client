@@ -15,7 +15,7 @@ class ProductsEndpoints:
         return requests.get(
             uri,   
             headers=self.get_headers()
-        )
+        ).json()
 
     def get_product(self, product_id, *args, **kwargs):
         return requests.get(
@@ -24,7 +24,7 @@ class ProductsEndpoints:
                 product_id
             ),
             headers=self.get_headers()
-        )
+        ).json()
 
     def get_product_attributekeys(self, product_id):
         return requests.get(
@@ -36,7 +36,7 @@ class ProductsEndpoints:
                 ),
                 headers=self.get_headers()
             )
-        )
+        ).json()
     
     def get_product_attributevalues(self, product_id):
         return requests.get(
@@ -48,7 +48,7 @@ class ProductsEndpoints:
                 ),
                 headers=self.get_headers()
             )
-        )
+        ).json()
     
     def get_product_blocks(self, product_id):
         return requests.get(
@@ -60,9 +60,8 @@ class ProductsEndpoints:
                 ),
                 headers=self.get_headers()
             )
-        )
+        ).json()
 
-        pass
     
     def get_product_features(self, product_id):
         return requests.get(
@@ -74,7 +73,7 @@ class ProductsEndpoints:
                 ),
                 headers=self.get_headers()
             )
-        )
+        ).json()
 
 
     def get_product_images(self, product_id):
@@ -87,7 +86,7 @@ class ProductsEndpoints:
                 ),
                 headers=self.get_headers()
             )
-        )
+        ).json()
 
 
     def get_product_items(self, product_id):
@@ -100,7 +99,7 @@ class ProductsEndpoints:
                 ),
             headers=self.get_headers()
             )
-        )
+        ).json()
     
     def get_product_resources(self, product_id):
         return requests.get(
@@ -112,7 +111,7 @@ class ProductsEndpoints:
                 ),
             headers=self.get_headers()
             )
-        )
+        ).json()
 
     def get_product_tags(self, product_id):
         return requests.get(
@@ -124,7 +123,7 @@ class ProductsEndpoints:
                 ),
             headers=self.get_headers()
             )
-        )
+        ).json()
 
     def get_product_taxonomyterms(self, product_id):
         return requests.get(
@@ -136,4 +135,4 @@ class ProductsEndpoints:
                 ),
             headers=self.get_headers()
             )
-        )
+        ).json()
